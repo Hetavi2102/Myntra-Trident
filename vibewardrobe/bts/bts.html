@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: rgb(0, 0, 0);
+            border-bottom: 3px solid #ff3f6c; 
+            padding-bottom: 5px;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 20px;
+            border-color: black;
+            width: 300px;
+        }
+
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-family: sans-serif;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #ff3f6c;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="download.png">
+        <div class="logo">BTS</div>
+        <nav>
+            <ul>
+                <li><a href="mensbts.html">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Stationary</a></li>
+                
+                
+            </ul> 
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+    </header>
+
+
+
+    <section class="products">
+        <div class="product-card">
+            <img src="hoodie.jpg" alt="Product Image">
+            <h3>The SV Style Men Printed Hoodie</h3>
+            <h4>BTS/Hoodie for Men (Black, Small)</h4>
+            <p>₹799</p>
+        </div>
+        <div class="product-card">
+            <img src="tshirtwhite.jpg" alt="Product Image">
+            <h3>Round Neck Style BTS</h3> 
+            <h4>The Best Printed Tshirt for Boys and Girls</h4>
+            <p>₹499</p>
+        </div>
+        <div class="product-card">
+            <img src="nanu.jpg" alt="Product Image">
+            <h3>Offo BTS Tiny Tans - Mic Drop Dancing</h3>
+            <h4>(Set of 7 Figures)</h4>
+            <p>₹899</p>
+        </div>
+        <div class="product-card">
+            <img src="access.jpg" alt="Product Image">
+            <h3>KOBBET Polyester 27Pcs Bts Theme Stationery Set Bts Blue Pencil Pouch With A5 Yellow Diary</h3>
+            <h4>Bts Pen Pencil Bts Return Gift Set For Girls,Bts Theme Party Favor Return Gift Bts Gift Set For Girls</h4>
+            <p>₹414</p>
+        </div>
+        <div class="product-card">
+            <img src="bracelete.jpg" alt="Product Image">
+            <h3>University Trendz BTS Fan Combo - BTS Signature Silicon Bracelet, Bangtan Kpop</h3>
+            <h4>Pendant Necklace & DOB Engraved Stainless Steel Ring (Pack of 3) For Unisex Adult</h4>
+            <p>₹439</p>
+        </div>
+    </section>
+</body>
+</html>
