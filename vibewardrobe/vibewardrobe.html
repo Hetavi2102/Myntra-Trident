@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            color: black;
+            border-bottom: 3px solid #ff3f6c ;
+            padding-bottom: 5px;
+        
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 20px;
+            border-color: black;
+            width: 300px;
+        }
+
+    
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 100px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            height: 500px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2em;
+            padding: 25px;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #ff3f6c;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="download.png">
+        <div class="logo"></div>
+        <nav>
+            <b>
+            <ul>
+            
+            
+                <li><h2><a href="#">Vibe Wardrobe</a></h2></li>
+               
+                
+            </ul>
+            </b>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products, brands and more">
+        </div>
+    </header>
+    
+    <section class="products">
+        <div class="product-card">
+            <img src="kvibe.png" alt="Product Image">
+            <h3><a href="kdrama.html">K-VIBE</a></h3>
+            
+        </div>
+        <div class="product-card">
+            <img src="anime.png" alt="Product Image">
+           <h3><a href="anime.html">ANIME</a></h3>
+            
+        </div>
+        <div class="product-card">
+            <img src="bts2.png" alt="Product Image">
+            <h3><a href="bts.html">BTS</a></h3>
+            
+        </div>
+    </section>
+</body>
+
+</html>
