@@ -1,0 +1,319 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Myntra</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color: white;
+                color: black;
+            }
+
+            .logo {
+                font-size: 1.5em;
+                font-weight: 1000;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 0 15px;
+            }
+
+            nav ul li a {
+                color: black;
+                text-decoration: none;
+            }
+
+            .search-bar input {
+                padding: 10px;
+                border-radius: 20px;
+                border-color: black;
+                width: 300px;
+            }
+
+            .hero img {
+                width: 100%;
+                height: auto;
+            }
+
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 20px;
+            }
+
+            .product-card {
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 10px;
+                width: 200px;
+                text-align: center;
+            }
+
+            .product-card img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+
+            .product-card h3 {
+                font-size: 1.2em;
+                margin: 10px 0;
+            }
+
+            .product-card p {
+                color: #ff3f6c;
+                font-size: 1.1em;
+            }
+
+            /* Floating chat button styles */
+            .chat-button-container {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .chat-button {
+                background-color: #ff009d;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 15px 25px;
+                font-size: 16px;
+                cursor: pointer;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+                background-image: url('background-image-url'); /* Add background image URL */
+                background-size: cover; /* Cover the entire button */
+                background-position: center; /* Center the background image */
+            }
+
+            .chat-button:hover {
+                background-color: #0056b3;
+            }
+
+            #chat-container {
+                display: none; /* Hidden by default */
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                width: 600px;
+                background-color: #f0f0f0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden; /* Ensure rounded corners clip child elements properly */
+                flex-direction: column;
+            }
+
+            #chat-box {
+                height: 400px;
+                width: 600px;
+                overflow-y: scroll;
+                padding: 10px;
+                background-color: #f9f9f9;
+            }
+
+            #messages {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .message {
+                margin-bottom: 10px;
+                clear: both;
+                overflow: hidden;
+                padding: 10px;
+                border-radius: 10px;
+                position: relative;
+            }
+
+            .user-message {
+                background-color: #ff009d;
+                color: #fff;
+                float: right;
+            }
+
+            .bot-message {
+                background-color: hsl(0, 0%, 91%);
+                float: left;
+            }
+
+            .message img {
+                max-width: 300px; /* Adjust image size */
+                border-radius: 5px;
+                margin-left: 10px;
+                margin-top: 5px;
+                display: block; /* Ensure images behave like block elements */
+            }
+
+            #user-input {
+                width: calc(100% - 70px);
+                padding: 10px;
+                border: none;
+                border-top: 1px solid #ccc;
+                border-radius: 5px;
+                float: left;
+            }
+
+            #send-btn {
+                width: 70px;
+                border: none;
+                background-color: #ff009d;
+                color: #fff;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 5px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="download.png" alt="Logo">
+            <div class="logo">Myntra</div>
+            <nav>
+                <b>
+                    <ul>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Kids</a></li>
+                        <li><a href="#">Home & Living</a></li>
+                        <li><a href="#">Beauty</a></li>
+                        <li><a href="vibewardrobe.html">Vibe Wardrobe</a></li>
+                        <li><a href="asthetic.html">Aesthetic</a></li>
+
+                    </ul>
+                </b>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+            </div>
+        </header>
+
+        <section class="hero">
+            <img src="image1.png" alt="Hero Image">
+        </section>
+
+        <section class="products">
+            <div class="product-card">
+                <img src="product1.png" alt="Product Image">
+                <h3>Fixed Waist Fit Cargo Pants</h3>
+                <p>₹999</p>
+            </div>
+            <div class="product-card">
+                <img src="product2.png" alt="Product Image">
+                <h3>Men Solid Polo Neck Jumper</h3>
+                <p>₹1299</p>
+            </div>
+            <div class="product-card">
+                <img src="product3.png" alt="Product Image">
+                <h3>Women Summer Urban Black Dress</h3>
+                <p>₹899</p>
+            </div>
+            <div class="product-card">
+                <img src="product4.png" alt="Product Image">
+                <h3>Cream Baggy pants</h3>
+                <p>₹1499</p>
+            </div>
+        </section>
+
+        
+
+        <!-- Floating chat button -->
+        <div class="chat-button-container">
+            <button class="chat-button" onclick="toggleChat()">Chat with us</button>
+        </div>
+
+        <!-- Chat container -->
+        <div id="chat-container">
+            <div id="chat-box">
+                <div id="messages"></div>
+            </div>
+            <input type="text" id="user-input" placeholder="Message Myntra bot....">
+            <button id="send-btn">Send</button>
+        </div>
+
+        <script>
+            function toggleChat() {
+                var chatContainer = document.getElementById("chat-container");
+                if (chatContainer.style.display === "none" || chatContainer.style.display === "") {
+                    chatContainer.style.display = "flex";
+                } else {
+                    chatContainer.style.display = "none";
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const sendBtn = document.getElementById('send-btn');
+                const userInput = document.getElementById('user-input');
+                const messages = document.getElementById('messages');
+
+                sendBtn.addEventListener('click', () => {
+                    const userMessage = userInput.value;
+                    if (userMessage.trim() !== "") {
+                        addMessage(userMessage, 'user');
+                        userInput.value = '';
+                        getBotResponse(userMessage);
+                    }
+                });
+
+                function addMessage(message, sender) {
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `message ${sender}-message`;
+
+                    // Check if the message contains an <img> tag
+                    if (message.includes('<img')) {
+                        messageDiv.innerHTML = message;
+                    } else {
+                        messageDiv.textContent = message;
+                    }
+
+                    messages.appendChild(messageDiv);
+                    messages.scrollTop = messages.scrollHeight;
+                }
+
+                function getBotResponse(userMessage) {
+                    const botResponse = generateResponse(userMessage);
+                    setTimeout(() => {
+                        addMessage(botResponse, 'bot');
+                    }, 500);
+                }
+
+                function generateResponse(userMessage) {
+                    const responses = {
+                        "hello": "Hi there! How can I help you today?",
+                        "how are you": "I'm good, thanks for asking! How can I assist you?",
+                        "bye": "Goodbye! Have a great day!",
+                        "warm skin tone": "For warm skin tones, I suggest wearing colors like coral, peach, golden yellow, and amber. <img src='mproduct1.jpg />",
+                        "cool skin tone": "For cool skin tones, try wearing colours like lavender, mint green, soft blue, and pale pink. <img src='https://example.com/cool_skin_tone.jpg' />",
+                        "neutral skin tone": "For neutral skin tones, you can wear a variety of colours including ivory, camel, taupe, and soft gray are great choices. <img src='https://example.com/neutral_skin_tone.jpg' />",
+                        "ivory skin tone": "For ivory skin tones, colours like coral, peach, lavender, mint green, emerald green, and ruby red are overwhelming choices following are some options you should try. <img src='ivory1.jpg' /> ,<img src='ivory3.jpg' />  <img src='ivory2.jpg' /> ",
+                        "suggest colours": "Sure, please tell me your skin tone. Here are options such as warm, cool, neutral, or ivory.<img src='skintone.png' />"
+                    };
+
+                    return responses[userMessage.toLowerCase()] || "I can only help with colors suiting to skintones . Could you please specify your skin tone? Options are warm, cool, neutral, or ivory.<img src='skintone.png' />";
+                }
+            });
+        </script>
+    </body>
+    </html>
