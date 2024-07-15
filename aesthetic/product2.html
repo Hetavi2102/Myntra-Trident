@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffff;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #ffff;
+            color: rgb(0, 0, 0);
+            padding: 1em 0;
+            
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 20px;
+            border-color: black;
+            width: 300px;
+        }
+
+
+        main {
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-images {
+            flex: 1;
+            min-width: 300px;
+        }
+        .product-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .product-details {
+            flex: 2;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 20px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+        .product-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .product-sizes,
+        .product-colors {
+            margin-bottom: 20px;
+        }
+        .product-sizes label,
+        .product-colors label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .product-sizes select,
+        .product-colors select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .add-to-cart {
+            background-color: #e91e63;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+        }
+        .add-to-cart:hover {
+            background-color: #d81b60;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><img src="download.png" alt="Myntra Logo" style="height: 40px;"></a>
+            <h1>AESTHETIC</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="product-images">
+            <img src="c2.jpg "alt="Product Image 1">
+            <img src="c1.jpg" alt="Product Image 2">
+        </div>
+        <div class="product-details">
+            <div class="product-title">Trendyol</div>
+            
+            <div class="product-price">₹719</div>
+           
+            <div class="product-description">
+                Women White Solid Crop Top
+            </div>
+            <div class="product-sizes">
+                <label for="sizes">Select Size:</label>
+                <select id="sizes">
+                    <option value="s">Small</option>
+                    <option value="m">Medium</option>
+                    <option value="l">Large</option>
+                    <option value="xl">X-Large</option>
+                </select>
+            </div>
+            <div class="product-colors">
+                <label for="colors">Select Color:</label>
+                <select id="colors">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                </select>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
