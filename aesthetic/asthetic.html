@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Section - Myntra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        header {
+            background-color: #ffff;
+            color: rgb(0, 0, 0);
+            padding: 1em 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            border-radius: 20px;
+            border-color: black;
+            width: 300px;
+        }
+
+
+        main {
+            padding: 20px;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 200px;
+            text-align: center;
+            padding: 2px;
+            margin: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-card h2 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-card h5 {
+            font-size: 0.9em;
+            margin: 10px 0;
+            color: rgb(78, 75, 75);
+        }
+
+        .product-card p {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#"><img src="download.png" alt="Myntra Logo" style="height: 40px;"></a>
+            <h1>ASTHETIC</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="products">
+           
+            <div class="product-grid">
+                <div class="product-card">
+                
+                    <img src="p1.jpg" alt="Product 1">
+                    
+                    
+                </div>
+                <div class="product-card">
+                    <img src="p2.jpg" alt="Product 2">
+                  
+                </div>
+                <div class="product-card">
+                <a href="AS1.html">
+                    <img src="p3.png" alt="Product 2">
+                </a>
+                </div>
+                <div class="product-card">
+                    <img src="p5.jpg" alt="Product 2">
+                   
+                </div>
+               
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function() {
+                 
+                });
+            });
+        });
+
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                const productName = card.querySelector('h2').textContent.toLowerCase();
+                if (productName.includes(searchInput)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
